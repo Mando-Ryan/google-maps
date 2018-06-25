@@ -22,6 +22,9 @@
             text-align: center;
             font-size: 16px;
         }
+        .image {
+            width: 90%;
+        }
     </style>
 </head>
 <body>
@@ -117,8 +120,8 @@
                         '<p><b>' + restaurant.address + '<br>'+ restaurant.hoursOperation + '</b></p>' +
                         '<p><b><a href="' + restaurant.linkToWebsite + '" target="_blank">' + restaurant.name + '</a></b> ' + restaurant.description +'</p>' +
                         '<b><a href="' + restaurant.linkToMenu + '" target="_blank">Click to see menu (if available)</a></b>' +
-                        '<img src="' + restaurant.image1 + '" style="width: 90%">' +
-                        '<img src="' + restaurant.image2 + '" style="width: 90%">' +
+                        '<img class="image" src="' + restaurant.image1 + '">' +
+                        '<img class="image" src="' + restaurant.image2 + '">' +
                         '</div></div>'
                     });
 
