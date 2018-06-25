@@ -6,7 +6,6 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Fun w/Google Maps API</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <style>
         /*css*/
         #map-canvas{
@@ -80,7 +79,7 @@
             hoursOperation: "10:45 A.M. to 11:00 P.M, 12AM (FRI & SAT)",
             description: "is a buzzy eatery with authentic Neapolitan pizzas, salads, housemade burrata & an all-Italian wine list.",
             linkToWebsite:"http://www.doughpizzeria.com/",
-            linkToMenu:"",
+            linkToMenu:"http://www.doughpizzeria.com/",
             image1:"http://www.doughpizzeria.com/images/uploads/161/dough_remod_8__banner.jpg",
             image2:"http://www.doughpizzeria.com/images/uploads/2/home_banner_2__banner.jpg",
             icon: "https://cdn0.iconfinder.com/data/icons/restaurant-53/64/Food-junk-pizza-fast_food-512.png"
@@ -112,7 +111,7 @@
                     // map.setCenter(results[0].geometry.location);
                     map.setCenter(marker);
                     // Create a new infoWindow object with content
-                    var infowindow = new google.maps.InfoWindow({
+                    var infoWindow = new google.maps.InfoWindow({
                         content:
                         '<div id="infoWindow">'+
                         '<h1 id="firstHeading">' + restaurant.name + '</h1><hr>'+
@@ -127,7 +126,7 @@
 
                     // Open the window using our map and marker
                     marker.addListener('click', function () {
-                        infowindow.open(map, marker);
+                        infoWindow.open(map, marker);
                     })
 
                 } else {
