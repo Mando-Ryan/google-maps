@@ -31,9 +31,31 @@
         center: {
             lat: 29.426791,
             lng: -98.489602
-        }
+        },
+        mapTypeId: google.maps.MapTypeId.ROADMAP
     };
+
     var map = new google.maps.Map(canvas, mapOptions);
+    var geocoder = new google.maps.Geocoder();
+    // Set our address to geocode
+    var address = "300 Alamo Plaza, San Antonio, TX, 78205";
+
+    geocoder.geocode({"address" : address}, function(results, status) {
+
+        if(status == google.maps.GeocoderStatus.OK) {
+            map.setCenter(results[0].geometry.location);
+        } else {
+            alert("Geocoding was not successful - STATUS:" + status);
+        }
+    });
+
+    //     var restaurant = {
+    //     name: "",
+    //     address: "",
+    //     lat: "",
+    //     lng: "",
+    //
+    // }
 
     })();
 </script>
